@@ -18,13 +18,13 @@ import (
     "context"
     "log"
     "time"
-    "github.com/jhulten/go-ctxlog"
+    l "github.com/jhulten/go-ctxlog"
 )
 
 func main() {
     ctx := context.Background()
-    ctx = ctxlog.WithWriter(ctx, os.Stdout)
-    ctxlog.PLog(ctx).Info("logged this")
+    ctx = l.WithWriter(ctx, os.Stdout)
+    l.PLog(ctx).Info("logged this")
 }
 ```
 
