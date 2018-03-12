@@ -24,7 +24,7 @@ import (
 func main() {
     ctx := context.Background()
     ctx = ctxlog.WithWriter(ctx, os.Stdout)
-
+    ctxlog.PLog(ctx).Info("logged this")
     
 }
 ```
